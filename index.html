@@ -22,7 +22,7 @@
     </header>
 
     <div class="bienvenida reveal">
-        <p style="margin:0; font-style: italic; font-size: 1.2em;">"2 años de garantía trayendo a tu mesa el rico y delicioso sabor papanteco"</p>
+        <p style="margin:0; font-style: italic; font-size: 1.2em;">"Trayendo a tu mesa el rico y delicioso sabor papanteco"</p>
     </div>
 
     <h2>🔥 Especialidades</h2>
@@ -31,7 +31,7 @@
             <img src="imagenes/combo.jpg">
             <div class="card-info">
                 <h3>Combo Surtido</h3>
-                <p class="description">12 PIEZAS: Incluye papas fritas.</p>
+                <p class="description">12 PIEZAS: sopes, tostadas, blanditos, molotes, flautas y empanadas.</p>
                 <span class="price-tag" data-precio="300">$300.00</span>
                 <button class="btn-add" onclick="controlador.agregar(this)">Añadir al Carrito +</button>
             </div>
@@ -41,44 +41,18 @@
             <img src="imagenes/estrujada.jpg">
             <div class="card-info">
                 <h3>Estrujada</h3>
-                <p class="description">Bañada en frijoles, queso fresco y aguacate.</p>
                 <div class="option-box">
-                    <span class="option-title">🥩 Elegir Carne:</span>
+                    <span class="option-title">🥩 Proteína:</span>
                     <select class="opt-carne papatenco-select">
                         <option value="Sencilla" data-p="120">Sencilla $120</option>
                         <option value="Con Cecina" data-p="160">Con Cecina $160</option>
                         <option value="Con Chuleta" data-p="160">Con Chuleta $160</option>
                         <option value="Con Huevo" data-p="160">Con Huevo $160</option>
                     </select>
-                    <span class="option-title">🌶️ Elegir Salsa:</span>
-                    <select class="opt-salsa papatenco-select">
-                        <option value="Verde">Verde</option>
-                        <option value="Morita">Morita</option>
-                        <option value="Mole">Mole</option>
-                        <option value="Entomatada">Entomatada</option>
-                    </select>
-                </div>
-                <button class="btn-add" onclick="controlador.agregar(this)">Añadir al Carrito +</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="imagenes/chilaquiles.jpg">
-            <div class="card-info">
-                <h3>Chilaquiles</h3>
-                <p class="description">Acompañados de frijoles, queso y aguacate.</p>
-                <div class="option-box">
-                    <span class="option-title">🥩 Carne:</span>
-                    <select class="opt-carne papatenco-select">
-                        <option value="Cecina" data-p="160">Cecina $160</option>
-                        <option value="Pechuga" data-p="160">Pechuga $160</option>
-                        <option value="Huevo" data-p="160">Huevo $160</option>
-                    </select>
                     <span class="option-title">🌶️ Salsa:</span>
                     <select class="opt-salsa papatenco-select">
-                        <option value="Verdes">Verdes</option>
-                        <option value="Rojos">Rojos</option>
-                        <option value="Campechanos">Campechanos</option>
+                        <option value="Verde">Verde</option><option value="Morita">Morita</option>
+                        <option value="Mole">Mole</option><option value="Entomatada">Entomatada</option>
                     </select>
                 </div>
                 <button class="btn-add" onclick="controlador.agregar(this)">Añadir al Carrito +</button>
@@ -95,26 +69,63 @@
                 <div class="option-box">
                     <span class="option-title">🔢 Tamaño:</span>
                     <select class="opt-carne papatenco-select">
-                        <option value="Orden (6 pzas)" data-p="160">Orden $160</option>
-                        <option value="Media (4 pzas)" data-p="130">Media $130</option>
-                        <option value="Sencilla Ord" data-p="120">Sencilla Ord $120</option>
+                        <option value="Ord. con Carne" data-p="160">Orden con Carne $160</option>
+                        <option value="1/2 con Carne" data-p="130">Media con Carne $130</option>
+                        <option value="Ord. Sencilla" data-p="120">Orden Sencilla $120</option>
+                        <option value="1/2 Sencilla" data-p="100">Media Sencilla $100</option>
                     </select>
                     <span class="option-title">🌶️ Salsa:</span>
                     <select class="opt-salsa papatenco-select">
-                        <option value="Frijol">Frijol (Enfrijoladas)</option>
-                        <option value="Pipian">Pipian</option>
-                        <option value="Mole">Mole</option>
+                        <option value="Pipian">Pipian</option><option value="Mole">Mole</option>
+                        <option value="Frijol">Frijol</option><option value="Morita">Morita</option>
                     </select>
                 </div>
-                <button class="btn-add" onclick="controlador.agregar(this)">Añadir al Carrito +</button>
+                <button class="btn-add" onclick="controlador.agregar(this)">Añadir +</button>
             </div>
         </div>
 
         <div class="card">
+            <img src="imagenes/molotes.jpg">
+            <div class="card-info">
+                <h3>Molotes</h3>
+                <div class="option-box">
+                    <span class="option-title">🔢 Variedad:</span>
+                    <select class="opt-carne papatenco-select">
+                        <option value="Ord. Natural" data-p="155">Ord. Natural $155</option>
+                        <option value="Ord. Ahogado" data-p="165">Ord. Ahogado $165</option>
+                        <option value="1/2 Natural" data-p="110">Media Natural $110</option>
+                        <option value="1/2 Ahogado" data-p="120">Media Ahogado $120</option>
+                    </select>
+                </div>
+                <button class="btn-add" onclick="controlador.agregar(this)">Añadir +</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>🥣 Caldos y Pozole</h2>
+    <div class="grid reveal">
+        <div class="card">
             <img src="imagenes/menudo.jpg">
             <div class="card-info">
                 <h3>Menudo</h3>
-                <span class="price-tag" data-precio="200">Gde: $200.00</span>
+                <div class="option-box">
+                    <select class="opt-carne papatenco-select">
+                        <option value="Grande" data-p="200">Grande $200</option>
+                        <option value="Chico" data-p="120">Chico $120</option>
+                    </select>
+                </div>
+                <button class="btn-add" onclick="controlador.agregar(this)">Añadir +</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>🍰 Postres</h2>
+    <div class="grid reveal">
+        <div class="card">
+            <img src="imagenes/postre1.jpg">
+            <div class="card-info">
+                <h3>Plátanos Fritos</h3>
+                <span class="price-tag" data-precio="70">$70.00</span>
                 <button class="btn-add" onclick="controlador.agregar(this)">Añadir +</button>
             </div>
         </div>
@@ -124,7 +135,7 @@
         <div class="cart-container">
             <div class="cart-header">
                 <span>🛒 MI PEDIDO</span>
-                <button onclick="controlador.limpiar()" style="background:none; color:white; border:none; cursor:pointer;">Vaciar</button>
+                <button onclick="controlador.limpiar()">Vaciar</button>
             </div>
             <div id="cart-items-list"></div>
             <div class="delivery-methods">
@@ -133,7 +144,7 @@
             </div>
             <div class="cart-total-section">
                 <span class="total-label">Total: <span id="cart-total-amt">$0</span></span>
-                <button class="btn-pay" onclick="controlador.pagar()">PAGAR AHORA</button>
+                <button class="btn-pay" onclick="controlador.pagar()">PAGAR AHORA 💳</button>
             </div>
         </div>
     </div>
