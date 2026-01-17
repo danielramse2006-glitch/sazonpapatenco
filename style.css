@@ -1,29 +1,36 @@
 :root { --rojo: #8e2113; --dorado: #f1c40f; --negro: #0a0a0a; --gris: rgba(26, 26, 26, 0.95); }
-body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--negro); color: #fff; overflow-x: hidden; padding-bottom: 180px; }
+body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--negro); color: #fff; overflow-x: hidden; padding-bottom: 120px; }
 
+/* Parallax */
 .parallax-bg-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
 .bg-part { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; transition: opacity 1.2s; }
 .foto1 { background-image: url('imagenes/terraza.jpg'); opacity: 1; }
 .foto2 { background-image: url('imagenes/terraza1.jpg'); opacity: 0; }
-.overlay-dark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 0; }
+.overlay-dark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); }
 
-header { height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1; }
-.logo-img { max-width: 150px; border: 3px solid var(--rojo); background: white; border-radius: 10px; }
+/* Header & Cards */
+header { height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.logo-img { max-width: 150px; border: 3px solid var(--rojo); border-radius: 10px; background: white; }
+h2 { color: var(--dorado); text-align: center; margin: 40px 0; border-bottom: 2px solid var(--rojo); display: table; margin: 40px auto; padding-bottom: 5px; }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 20px; max-width: 1200px; margin: auto; position: relative; z-index: 1; }
-.card { background: var(--gris); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
-.card img { width: 100%; height: 200px; object-fit: cover; }
-.card-info { padding: 15px; text-align: center; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
+.card { background: var(--gris); border-radius: 15px; overflow: hidden; border: 1px solid #333; text-align: center; transition: 0.3s; }
+.card:hover { transform: translateY(-5px); border-color: var(--dorado); }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-info { padding: 15px; }
 
-/* Selectores */
-.papatenco-select { width: 100%; background: #000; color: var(--dorado); border: 1px solid #444; padding: 8px; margin-top: 5px; border-radius: 5px; font-family: 'Poppins'; }
-.btn-add { background: var(--rojo); color: white; border: none; padding: 10px; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px; }
+/* Selectores y Botones */
+.papatenco-select { width: 100%; background: #000; color: var(--dorado); border: 1px solid #444; padding: 5px; margin: 5px 0; border-radius: 5px; }
+.btn-add { background: var(--rojo); color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+.price-tag { color: var(--dorado); font-weight: bold; display: block; margin: 5px 0; }
 
-/* Carrito */
-#cart-drawer { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; border-top: 3px solid var(--dorado); z-index: 2000; padding: 20px; transition: 0.5s; }
+/* Carrito Estilo */
+#cart-drawer { position: fixed; bottom: 0; width: 100%; background: #111; border-top: 3px solid var(--dorado); padding: 15px; z-index: 1000; transition: 0.5s; }
 .cart-hidden { transform: translateY(100%); }
-#cart-items-list { max-height: 100px; overflow-y: auto; font-size: 0.9em; margin: 10px 0; }
-.btn-pay { background: #25d366; color: black; border: none; padding: 10px 30px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.cart-container { max-width: 800px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
+#cart-items-list { max-height: 100px; overflow-y: auto; font-size: 0.85em; }
+.cart-total-section { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #333; pt: 10px; }
+.btn-pay { background: #25d366; color: white; border: none; padding: 10px 20px; border-radius: 30px; font-weight: bold; cursor: pointer; }
 
 /* Reveal */
 .reveal { opacity: 0; transform: translateY(30px); transition: 1s; }
